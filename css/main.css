@@ -1,0 +1,149 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Georgia;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: hsl(209,75%,42%);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.pell-actionbar {
+  display: none;
+}
+
+.pell-content {
+  font-family: Georgia;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  min-height: 20em;
+  line-height: 140%;
+  outline: 0;
+  padding: 10px 200px !important;
+}
+
+.pell-content > div {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+.pell-content > div:last-child {
+  opacity: 1;
+}
+
+body.reveal .pell-content > div {
+  opacity: 1 !important;
+}
+
+#editor {
+  position: relative;
+}
+
+#editor .placeholder {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  padding-top: 10px;
+  line-height: 140%;
+  color: hsl(0,0%,60%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#editor .placeholder.show {
+  transition: opacity 3s ease;
+  opacity: 1;
+}
+
+.footer {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  font-size: 12px;
+  opacity: .4;
+  transition: opacity .3s ease;
+}
+
+.footer:hover {
+  opacity: 1;
+}
+
+.action-btn {
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: hsl(0,0%,94%);
+  padding: 3px 8px;
+  margin-right: 10px;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: hsla(0,0%,85%,.85);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window > div {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  color: hsl(0,0%,20%);
+  line-height: 130%;
+}
+
+.modal-close {
+  color: hsl(0,0%,50%);
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: black;
+}
