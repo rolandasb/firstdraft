@@ -44,13 +44,16 @@ a:hover {
   padding: 10px 200px !important;
 }
 
-.pell-content > div {
+.pell-content div {
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
   transition: opacity 1s ease;
-  opacity: 0;
+  opacity: 1;
+  margin-bottom: 1rem;
 }
 
-.pell-content > div:last-child {
-  opacity: 1;
+.pell-content .fade {
+  opacity: 0;
 }
 
 body.reveal .pell-content > div {
@@ -73,6 +76,8 @@ body.reveal .pell-content > div {
 }
 
 #editor .placeholder.show {
+  -webkit-transition: opacity 3s ease;
+  -o-transition: opacity 3s ease;
   transition: opacity 3s ease;
   opacity: 1;
 }
@@ -84,6 +89,8 @@ body.reveal .pell-content > div {
   width: 100%;
   font-size: 12px;
   opacity: .4;
+  -webkit-transition: opacity .3s ease;
+  -o-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
 
